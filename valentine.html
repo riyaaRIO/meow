@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine 💗</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffd6e8;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        color: #ff4d88;
+        font-size: 2rem;
+    }
+
+    img {
+        width: 250px;
+        max-width: 80%;
+        margin: 20px 0;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #yesBtn {
+        background-color: #ff4d88;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    #noBtn {
+        background-color: #ccc;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="content">
+    <h1>hiii honeyyy<br>will you be my valentine? (pretty please)</h1>
+
+    <img src="https://tenor.com/en-GB/view/mocha-bear-kiss-bear-kiss-flying-kiss-mocha-bear-mocha-bear-love-gif-15571983331611947522.gif">
+
+    <div>
+        <button id="yesBtn" onclick="sayYes()">YES 💖 (yay)</button>
+        <button id="noBtn" onclick="sayNo()">NO :( </button>
+    </div>
+</div>
+
+<script>
+    let noCount = 0;
+    let yesSize = 18;
+
+    function sayNo() {
+        noCount++;
+        yesSize += 15;
+        document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+
+        if (noCount >= 15) {
+            sayYes();
+        }
+    }
+
+    function sayYes() {
+        document.getElementById("content").innerHTML = `
+            <h1>hehehehe bhondu 💗<br>I knew you would say YES cutie</h1>
+            <img src="https://tenor.com/en-GB/view/milk-and-mocha-gif-9109650600581186689.gif">
+        `;
+    }
+</script>
+
+</body>
+</html>
